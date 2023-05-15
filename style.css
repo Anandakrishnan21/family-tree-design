@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFAF4;
+}
+
+.navbar {
+    text-align: center;
+    font-size: 1rem;
+    background-color: #B3C890;
+    padding: 0.75rem;
+}
+
+.tree {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.tree li img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px !important;
+    margin: auto;
+}
+
+.tree ul {
+    padding: 30px;
+    position: relative;
+}
+
+.tree li {
+    display: inline-table;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+}
+
+.tree li::after,
+.tree li::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 51%;
+    height: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.tree li::after {
+    left: 50%;
+    border-left: 1px solid #ccc;
+}
+
+.tree li:only-child::after,
+.tree li:only-child::before {
+    display: none;
+}
+
+.tree li:only-child {
+    padding-top: 0;
+}
+
+.tree li:first-child::before,
+.tree li:last-child::after {
+    border: 0 none;
+}
+
+.tree li:last-child::before {
+    border-right: 1px solid #ccc;
+    border-radius: 0px 5px 0px 0px;
+}
+
+.tree li:last-child::after,
+.tree li:first-child::after {
+    border-radius: 5px 0px 0px 0px;
+}
+
+.tree a {
+    padding: 10px;
+    display: inline-grid;
+    text-decoration: none;
+    color: #000;
+}
+
+.tree ul ul::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #ccc;
+    width: 0;
+    height: 30px;
+}
+
+span {
+    color: #000;
+    background-color: #F0EDD4;
+    padding: 5px;
+}
+
+@media (max-width: 980px) {
+    .tree ul {
+        padding: 10px;
+    }
+
+    .tree li img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 5px !important;
+    }
+
+    .tree a {
+        font-size: 14px;
+    }
+
+    .tree ul ul::before {
+        height: 10px;
+    }
+
+    .tree li {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .tree ul {
+        padding: 10px;
+    }
+
+    span {
+        padding: 0px;
+    }
+
+    .tree li img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 5px !important;
+    }
+
+    .tree a {
+        font-size: 14px;
+    }
+
+    .tree ul ul::before {
+        height: 10px;
+    }
+
+    .tree li {
+        padding: 5px;
+    }
+}
